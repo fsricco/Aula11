@@ -50,22 +50,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-
-// //Essa é a rota nova com id
-// router.get('/:id', async (req, res) => {
-//     try {
-//         const usuario = await Usuario.findById({ _id: req.params.id }); //Esse findOne vem do mongoose, mas trocamos pelo findById para pesuisar pelo id
-//         if (!usuario) {
-//             res.status(422).json({ mensagem: "Usuario não encontrado" });
-//             return
-//         }
-//         res.status(200).json(usuario);
-//     } catch (error) {
-//         res.status(500).json({ error: error });
-//     }
-// });
-
-
 //Apagar tarefa
 router.delete('/:id', async (req, res) => {
     try {
